@@ -1,0 +1,131 @@
+.loader {
+  border: 10px solid #9356dc; /* Couleur de bordure */
+  border-top: 10px solid #ff79da; /* Couleur du dessus */
+  border-bottom: 10px solid #99e2d0; /* Couleur du dessous */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ustensils-moving {
+  0% {
+    transform: translateY(-5px);
+    animation-timing-function: linear;
+  }
+
+  100% {
+    transform: translateY(5px);
+    animation-timing-function: linear;
+  }
+}
+
+/* Courses apparition */
+@keyframes fade-in {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+}
+
+.fade-in {
+  transform-origin: top;
+  animation: fade-in 2s forwards;
+
+  &--1delay {
+    animation: fade-in 2s 500ms both;
+  }
+
+  &--2delay {
+    animation: fade-in 2s 1000ms both;
+  }
+}
+
+/* Heart fill */
+@keyframes heart-fill {
+  0% {
+    opacity: (0);
+    transform: scale(0.2);
+  }
+
+  15% {
+    opacity: (0.25);
+  }
+
+  80% {
+    opacity: (1);
+    transform: scale(1);
+  }
+}
+
+/* CSS pour les éléments d'entrée */
+.race-list:nth-child(1) .race-cards {
+  animation: appearEntrance 1.5s ease forwards;
+  opacity: 0;
+}
+
+/* CSS pour les éléments de plat */
+.race-list:nth-child(2) .race-cards {
+  animation: appearPlat 5.5s ease forwards;
+  opacity: 0;
+}
+
+/* CSS pour les éléments de dessert */
+.race-list:nth-child(3) .race-cards {
+  animation: appearDessert 9.5s ease forwards;
+  opacity: 0;
+}
+
+/* Animation pour les éléments d'entrée */
+@keyframes appearEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation pour les éléments de plat */
+@keyframes appearPlat {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation pour les éléments de dessert */
+@keyframes appearDessert {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
